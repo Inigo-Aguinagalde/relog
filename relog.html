@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Relog</title>
+</head>
+<body>
+<img id="imMin1" src="images/n0.gif">
+<img id="imMin0" src="images/n0.gif">
+<t style="font-size: 100px">:</t>
+<img id="imSec1" src="images/n0.gif">
+<img id="imSec0" src="images/n0.gif">
+
+
+<script>
+
+date = new Date();
+sec = date.getSeconds()+""
+min = date.getMinutes()+"";
+
+i=sec[1];
+j=sec[0];
+k=min[1];
+l=min[0];
+
+setInterval(Relog,1000);
+
+	
+function Relog(){
+	i++;
+	
+
+	if(i>9){
+	    i=0;
+	    j++
+	
+	}
+	if(j>5){
+	    j=0;
+	    k++
+	
+	}
+	if(k>9){
+	    k=0;
+	    l++
+	
+	}
+	if(l>5){
+	    l=0;
+	}
+
+	document.getElementById("imSec0").src=`images/n${i}.gif`
+	document.getElementById("imSec1").src=`images/n${j}.gif`
+	document.getElementById("imMin0").src=`images/n${k}.gif`
+	document.getElementById("imMin1").src=`images/n${l}.gif`
+}
+</script>
+</body>
+</html>
