@@ -18,10 +18,29 @@ date = new Date();
 sec = date.getSeconds()+""
 min = date.getMinutes()+"";
 
-i=sec[1];
-j=sec[0];
-k=min[1];
-l=min[0];
+secArr = [sec[0]];
+minArr = [min[0]];
+
+   if(sec.length<=1){
+	secArr.unshift(0)
+
+   }else{
+
+	secArr.push(sec[1]) 
+ }
+
+
+   if(min.length<=1){
+	minArr.unshift(0)
+
+   }else{
+	minArr.push(min[1])
+ }
+
+i=secArr[1];
+j=secArr[0];
+k=minArr[1];
+l=minArr[0];
 
 setInterval(Relog,1000);
 
